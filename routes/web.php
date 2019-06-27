@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-	return File::get('fb.txt');
+    return view('welcome');
 });
 
 
