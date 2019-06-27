@@ -25,7 +25,7 @@ class BotController extends Controller
                 "text" => $messageText,
             ],
         ];
-        $ch = curl_init('https://graph.facebook.com/v2.6/me/messages?access_token=EAAjRW2AejqsBAPp6V7VCvZB0fXnZBgFUUbPjic9ui0EugVVoMndYWwB91ALYt8F6JKPVViRKFa7ug5fuyEmxSht542kmE4eVjHZBO2F7uuDPVsfQmPjSHWNDwtNY440QK8S5xZCTmtNsq1iEGkl5Iqo9rEZBmnx8Rtip1LTvIbLk8mtpxTrMi');
+        $ch = curl_init('https://graph.facebook.com/v3.3/me/messages?access_token=EAAjRW2AejqsBAPp6V7VCvZB0fXnZBgFUUbPjic9ui0EugVVoMndYWwB91ALYt8F6JKPVViRKFa7ug5fuyEmxSht542kmE4eVjHZBO2F7uuDPVsfQmPjSHWNDwtNY440QK8S5xZCTmtNsq1iEGkl5Iqo9rEZBmnx8Rtip1LTvIbLk8mtpxTrMi');
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_HEADER, false);
         curl_setopt($ch, CURLOPT_HTTPHEADER, ["Content-Type: application/json"]);
