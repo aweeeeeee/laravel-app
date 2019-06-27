@@ -8,7 +8,7 @@ class BotController extends Controller
 {
     public function bot(Request $request) {
        
-		if ($request->get('hub_mode') == 'subscribe' and $request->get('hub_verify_token') === env('HUB_VERIFY_TOKEN')) {
+		if ($request->get('hub_mode') == 'subscribe' and $request->get('hub_verify_token') === 'aweaweawe') {
 			return response($request->get('hub_challenge'));
 		}
 		return response('Error, verify token doesn\'t match', 400);
@@ -46,7 +46,7 @@ class BotController extends Controller
 					]
 				];
 		$client = new \GuzzleHttp\Client;
-		$res = $client->request('POST', 'https://graph.facebook.com/v2.6/me/messages?access_token='.env('FB_TOKEN'),  $data);
+		$res = $client->request('POST', 'https://graph.facebook.com/v2.6/me/messages?access_token=EAAjRW2AejqsBAI6GVrHoiExh8YiaFbta3tFH2LEZBEZB1CEZBRqGN2AA7AuKZCXX8SFxFjCDJEzgCnWGEAcZBODxSG5vkFYRDEZAOxpa2xaEYsKi8hizZBhYDgED2ptHezypeaewT3vbVGqxdEczbCTfPcVoYAYfjPXrV18xgPh93dnNKZCZCZAduZA',  $data);
 		return $res->getBody();
 	}
 }
